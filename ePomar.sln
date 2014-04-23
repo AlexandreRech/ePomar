@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Apresentação", "1. Apresentação", "{4435E703-9020-43DC-A466-10B3043E52D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Aplicação", "2. Aplicação", "{6EFA8064-94FE-4406-BD07-F88A85CCB659}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Modelo", "3. Modelo", "{29BB5296-7B78-4D29-9493-D403B7AD070B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infraestrutura", "4. Infraestrutura", "{07517B92-1ED3-4902-8BCC-6A7F020B9EA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Testes", "5. Testes", "{CB782AFD-5EFC-4D3D-89E3-C44BE0537039}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Documentos", "6. Documentos", "{A0660790-EF74-43C9-BFB7-4E4CB0B58225}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.ePomar.Modelo", "Uniplac.ePomar.Modelo\Uniplac.ePomar.Modelo.csproj", "{CA9E873A-17B9-44C6-BAC3-7C68B240EF45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.ePomar.Aplicacao", "Uniplac.ePomar.Aplicacao\Uniplac.ePomar.Aplicacao.csproj", "{5C0BBCE0-7AFD-4BFA-8E4E-F89CA79F72FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.ePomar.Infraestrutura.Dao", "Uniplac.ePomar.Infraestrutura.Dao\Uniplac.ePomar.Infraestrutura.Dao.csproj", "{65349B57-23E8-4078-BB18-656350B773C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.ePomar.ConsoleApp", "Uniplac.ePomar.ConsoleApp\Uniplac.ePomar.ConsoleApp.csproj", "{F77ECCC4-FAAC-4FCB-9F6A-994A48DA5DD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA9E873A-17B9-44C6-BAC3-7C68B240EF45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA9E873A-17B9-44C6-BAC3-7C68B240EF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA9E873A-17B9-44C6-BAC3-7C68B240EF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA9E873A-17B9-44C6-BAC3-7C68B240EF45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0BBCE0-7AFD-4BFA-8E4E-F89CA79F72FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0BBCE0-7AFD-4BFA-8E4E-F89CA79F72FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0BBCE0-7AFD-4BFA-8E4E-F89CA79F72FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0BBCE0-7AFD-4BFA-8E4E-F89CA79F72FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65349B57-23E8-4078-BB18-656350B773C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65349B57-23E8-4078-BB18-656350B773C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65349B57-23E8-4078-BB18-656350B773C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65349B57-23E8-4078-BB18-656350B773C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F77ECCC4-FAAC-4FCB-9F6A-994A48DA5DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F77ECCC4-FAAC-4FCB-9F6A-994A48DA5DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F77ECCC4-FAAC-4FCB-9F6A-994A48DA5DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F77ECCC4-FAAC-4FCB-9F6A-994A48DA5DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F77ECCC4-FAAC-4FCB-9F6A-994A48DA5DD8} = {4435E703-9020-43DC-A466-10B3043E52D4}
+		{5C0BBCE0-7AFD-4BFA-8E4E-F89CA79F72FE} = {6EFA8064-94FE-4406-BD07-F88A85CCB659}
+		{CA9E873A-17B9-44C6-BAC3-7C68B240EF45} = {29BB5296-7B78-4D29-9493-D403B7AD070B}
+		{65349B57-23E8-4078-BB18-656350B773C2} = {07517B92-1ED3-4902-8BCC-6A7F020B9EA7}
+	EndGlobalSection
+EndGlobal
