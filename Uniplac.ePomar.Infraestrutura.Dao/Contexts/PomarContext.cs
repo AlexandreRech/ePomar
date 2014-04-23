@@ -20,14 +20,5 @@ namespace Uniplac.ePomar.Infraestrutura.Dao.Contexts
         }
     }
 
-    /*
-    public class ResourceManagerDbInitializer : DropCreateDatabaseIfModelChanges<PomarContext>
-    {
-        protected override void Seed(PomarContext context)
-        {
-            //context.Users.Add(new User {  Email = "rech@ndd.com", Password = "123" });
-            //context.SaveChanges();           
-        }
-    }
-    */
+ 
 }
