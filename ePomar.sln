@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.ePomar.Infraestrutu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.ePomar.ConsoleApp", "Uniplac.ePomar.ConsoleApp\Uniplac.ePomar.ConsoleApp.csproj", "{F77ECCC4-FAAC-4FCB-9F6A-994A48DA5DD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uniplac.ePomar.WindowsApp", "Uniplac.ePomar.WindowsApp\Uniplac.ePomar.WindowsApp.csproj", "{4754A91A-E450-43E9-ACBF-B3BEE2FDCAF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,12 +47,17 @@ Global
 		{F77ECCC4-FAAC-4FCB-9F6A-994A48DA5DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F77ECCC4-FAAC-4FCB-9F6A-994A48DA5DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F77ECCC4-FAAC-4FCB-9F6A-994A48DA5DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4754A91A-E450-43E9-ACBF-B3BEE2FDCAF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4754A91A-E450-43E9-ACBF-B3BEE2FDCAF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4754A91A-E450-43E9-ACBF-B3BEE2FDCAF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4754A91A-E450-43E9-ACBF-B3BEE2FDCAF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F77ECCC4-FAAC-4FCB-9F6A-994A48DA5DD8} = {4435E703-9020-43DC-A466-10B3043E52D4}
+		{4754A91A-E450-43E9-ACBF-B3BEE2FDCAF8} = {4435E703-9020-43DC-A466-10B3043E52D4}
 		{5C0BBCE0-7AFD-4BFA-8E4E-F89CA79F72FE} = {6EFA8064-94FE-4406-BD07-F88A85CCB659}
 		{CA9E873A-17B9-44C6-BAC3-7C68B240EF45} = {29BB5296-7B78-4D29-9493-D403B7AD070B}
 		{65349B57-23E8-4078-BB18-656350B773C2} = {07517B92-1ED3-4902-8BCC-6A7F020B9EA7}

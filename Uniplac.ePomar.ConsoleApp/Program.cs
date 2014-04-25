@@ -23,7 +23,7 @@ namespace Uniplac.ePomar.ConsoleApp
 
             var repository = new FornecedorRepository(dbFactory);
 
-            var fornecedor = new Fornecedor {Nome = "Alexandre Rech"};
+            var fornecedor = new Fornecedor {Nome = "Filipe Andrade"};
 
             repository.Add(fornecedor);
 
