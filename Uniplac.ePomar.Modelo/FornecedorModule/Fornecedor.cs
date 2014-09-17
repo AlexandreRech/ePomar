@@ -12,5 +12,15 @@ namespace Uniplac.ePomar.Modelo.FornecedorModule
 
         public string Nome { get; set; }
 
+        public void Valida()
+        {
+            if (string.IsNullOrEmpty(Nome))
+                throw new ArgumentNullException("O nome do fornecedor não pode estar branco.");
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Id: {0} - {1}", Id, Nome);
+        }
     }
 }

@@ -43,6 +43,16 @@
     <Compile Include="FornecedorModule\IFornecedorService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Uniplac.ePomar.Infraestrutura.Dao\Uniplac.ePomar.Infraestrutura.Dao.csproj">
+      <Project>{65349b57-23e8-4078-bb18-656350b773c2}</Project>
+      <Name>Uniplac.ePomar.Infraestrutura.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uniplac.ePomar.Modelo\Uniplac.ePomar.Modelo.csproj">
+      <Project>{ca9e873a-17b9-44c6-bac3-7c68b240ef45}</Project>
+      <Name>Uniplac.ePomar.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
