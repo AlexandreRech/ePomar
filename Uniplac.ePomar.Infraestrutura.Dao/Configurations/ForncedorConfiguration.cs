@@ -11,6 +11,10 @@ namespace Uniplac.ePomar.Infraestrutura.Dao.Configurations
             HasKey(x => x.Id);
 
             Property(x => x.Nome);
+
+            Property(x => x.Contato);
+
+            Property(x => x.Nota);
         }
     }
 }

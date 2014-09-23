@@ -30,6 +30,8 @@ namespace Uniplac.ePomar.WindowsApp.Controls.FornecedorForms
                 
                 txtId.Text = _fornecedor.Id.ToString();
                 txtNome.Text = _fornecedor.Nome;
+                txtContato.Text = _fornecedor.Contato;
+                txtNota.Text = _fornecedor.Nota;
                
             }
         }
@@ -41,6 +43,8 @@ namespace Uniplac.ePomar.WindowsApp.Controls.FornecedorForms
                 
                 _fornecedor.Id = Convert.ToInt32(txtId.Text);
                 _fornecedor.Nome = txtNome.Text;
+                _fornecedor.Contato = txtContato.Text;
+                _fornecedor.Nota = txtNota.Text;
                 
                 _fornecedor.Valida();
             }

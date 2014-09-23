@@ -60,7 +60,7 @@ namespace Uniplac.ePomar.WindowsApp.Controls.FornecedorForms
                 MessageBox.Show("Nenhuma Fornecedor selecionado. Selecione um Fornecedor antes de solicitar a exclusão");
                 return;
             }
-            if (MessageBox.Show("Deseja remover o Fornecedor selecionado?", "", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja remover o Fornecedor selecionado?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
                 {

@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -59,6 +59,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,6 +70,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\ClienteForms\ClienteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ClienteForms\ClienteControl.Designer.cs">
+      <DependentUpon>ClienteControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClienteForms\ClienteDataManagerImpl.cs" />
+    <Compile Include="Controls\ClienteForms\ClienteDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ClienteForms\ClienteDialog.Designer.cs">
+      <DependentUpon>ClienteDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DespesaForms\DespesaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DespesaForms\DespesaControl.Designer.cs">
+      <DependentUpon>DespesaControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DespesaForms\DespesaDataManagerImpl.cs" />
+    <Compile Include="Controls\DespesaForms\DespesaDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\DespesaForms\DespesaDialog.Designer.cs">
+      <DependentUpon>DespesaDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Extensions\ListControlExtensions.cs" />
+    <Compile Include="Controls\ProdutoForms\ProdutoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProdutoForms\ProdutoControl.Designer.cs">
+      <DependentUpon>ProdutoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProdutoForms\ProdutoDataManagerImpl.cs" />
+    <Compile Include="Controls\ProdutoForms\ProdutoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ProdutoForms\ProdutoDialog.Designer.cs">
+      <DependentUpon>ProdutoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReceitaForms\ReceitaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReceitaForms\ReceitaControl.Designer.cs">
+      <DependentUpon>ReceitaControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReceitaForms\ReceitaDataManagerImpl.cs" />
+    <Compile Include="Controls\ReceitaForms\ReceitaDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ReceitaForms\ReceitaDialog.Designer.cs">
+      <DependentUpon>ReceitaDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RelatorioForms\RelatorioProdutosDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\RelatorioForms\RelatorioProdutosDialog.Designer.cs">
+      <DependentUpon>RelatorioProdutosDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +152,33 @@
     <Compile Include="Controls\FornecedorForms\FornecedorDialog.Designer.cs">
       <DependentUpon>FornecedorDialog.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Controls\ClienteForms\ClienteControl.resx">
+      <DependentUpon>ClienteControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ClienteForms\ClienteDialog.resx">
+      <DependentUpon>ClienteDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DespesaForms\DespesaControl.resx">
+      <DependentUpon>DespesaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DespesaForms\DespesaDialog.resx">
+      <DependentUpon>DespesaDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProdutoForms\ProdutoControl.resx">
+      <DependentUpon>ProdutoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProdutoForms\ProdutoDialog.resx">
+      <DependentUpon>ProdutoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReceitaForms\ReceitaControl.resx">
+      <DependentUpon>ReceitaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReceitaForms\ReceitaDialog.resx">
+      <DependentUpon>ReceitaDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RelatorioForms\RelatorioProdutosDialog.resx">
+      <DependentUpon>RelatorioProdutosDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,7 +198,6 @@
     <EmbeddedResource Include="Controls\FornecedorForms\FornecedorDialog.resx">
       <DependentUpon>FornecedorDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -168,14 +254,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\ePomarDb.mdf">
+    <Content Include="Database\ePomarDb1.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database\ePomarDb_log.ldf">
-      <DependentUpon>ePomarDb.mdf</DependentUpon>
+    <Content Include="Database\ePomarDb1_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ePomarDb1.mdf</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -12,6 +12,10 @@ namespace Uniplac.ePomar.Modelo.FornecedorModule
 
         public string Nome { get; set; }
 
+        public string Contato { get; set; }
+
+        public string Nota { get; set; }
+
         public void Valida()
         {
             if (string.IsNullOrEmpty(Nome))
@@ -20,7 +24,7 @@ namespace Uniplac.ePomar.Modelo.FornecedorModule
 
         public override string ToString()
         {
-            return string.Format("Id: {0} - {1}", Id, Nome);
+            return string.Format("Id: {0} - Nome: {1} - Contato: {2} - Nota: {3}", Id, Nome, Contato, Nota);
         }
     }
 }

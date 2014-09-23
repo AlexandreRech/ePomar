@@ -39,9 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteModule\ClienteServiceImpl.cs" />
+    <Compile Include="ClienteModule\IClienteService.cs" />
+    <Compile Include="DespesaModule\DespesaServiceImpl.cs" />
+    <Compile Include="DespesaModule\IDespesaService.cs" />
     <Compile Include="FornecedorModule\FornecedorServiceImpl.cs" />
     <Compile Include="FornecedorModule\IFornecedorService.cs" />
+    <Compile Include="ProdutoModule\IProdutoService.cs" />
+    <Compile Include="ProdutoModule\ProdutoServiceImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceitaModule\IReceitaService.cs" />
+    <Compile Include="ReceitaModule\ReceitaServiceImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Uniplac.ePomar.Infraestrutura.Dao\Uniplac.ePomar.Infraestrutura.Dao.csproj">

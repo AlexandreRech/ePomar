@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.toolbar = new System.Windows.Forms.ToolStrip();
+            this.btnAdd = new System.Windows.Forms.ToolStripButton();
+            this.btnEdit = new System.Windows.Forms.ToolStripButton();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.description = new System.Windows.Forms.ToolStripLabel();
             this.tituloLabel = new System.Windows.Forms.ToolStripLabel();
@@ -38,11 +41,14 @@
             this.panControl = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.caToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.despesasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.receitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAdd = new System.Windows.Forms.ToolStripButton();
-            this.btnEdit = new System.Windows.Forms.ToolStripButton();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.cmbTpRelatorio = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.toolbar.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -63,6 +69,45 @@
             this.toolbar.Size = new System.Drawing.Size(670, 31);
             this.toolbar.TabIndex = 13;
             this.toolbar.Text = "toolStrip1";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAdd.Image = global::Uniplac.ePomar.WindowsApp.Properties.Resources.Symbol_Add;
+            this.btnAdd.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnAdd.Size = new System.Drawing.Size(40, 28);
+            this.btnAdd.Text = "toolStripButton1";
+            this.btnAdd.ToolTipText = "Adicionar";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEdit.Image = global::Uniplac.ePomar.WindowsApp.Properties.Resources.Symbol_Pencil;
+            this.btnEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnEdit.Size = new System.Drawing.Size(40, 28);
+            this.btnEdit.Text = "toolStripButton2";
+            this.btnEdit.ToolTipText = "Editar";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDelete.Image = global::Uniplac.ePomar.WindowsApp.Properties.Resources.Symbol_Delete;
+            this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(40, 28);
+            this.btnDelete.Text = "toolStripButton3";
+            this.btnDelete.ToolTipText = "Deletar";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // toolStripSeparator1
             // 
@@ -120,17 +165,53 @@
             // caToolStripMenuItem
             // 
             this.caToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.produtosToolStripMenuItem,
+            this.despesasToolStripMenuItem,
+            this.receitasToolStripMenuItem,
+            this.clienteToolStripMenuItem,
             this.fornecedoresMenuItem,
             this.sairToolStripMenuItem});
             this.caToolStripMenuItem.Name = "caToolStripMenuItem";
             this.caToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.caToolStripMenuItem.Text = "Cadastros";
             // 
+            // produtosToolStripMenuItem
+            // 
+            this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
+            this.produtosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.produtosToolStripMenuItem.Text = "Produtos";
+            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
+            // 
+            // despesasToolStripMenuItem
+            // 
+            this.despesasToolStripMenuItem.Name = "despesasToolStripMenuItem";
+            this.despesasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.despesasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.despesasToolStripMenuItem.Text = "Despesas";
+            this.despesasToolStripMenuItem.Click += new System.EventHandler(this.despesasToolStripMenuItem_Click);
+            // 
+            // receitasToolStripMenuItem
+            // 
+            this.receitasToolStripMenuItem.Name = "receitasToolStripMenuItem";
+            this.receitasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.receitasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.receitasToolStripMenuItem.Text = "Receitas";
+            this.receitasToolStripMenuItem.Click += new System.EventHandler(this.receitasToolStripMenuItem_Click);
+            // 
+            // clienteToolStripMenuItem
+            // 
+            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+            this.clienteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
+            // 
             // fornecedoresMenuItem
             // 
             this.fornecedoresMenuItem.Name = "fornecedoresMenuItem";
-            this.fornecedoresMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.fornecedoresMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.fornecedoresMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.fornecedoresMenuItem.Size = new System.Drawing.Size(185, 22);
             this.fornecedoresMenuItem.Text = "Fornecedores";
             this.fornecedoresMenuItem.Click += new System.EventHandler(this.fornecedoresMenuItem_Click);
             // 
@@ -138,53 +219,39 @@
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
-            // btnAdd
+            // cmbTpRelatorio
             // 
-            this.btnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAdd.Image = global::Uniplac.ePomar.WindowsApp.Properties.Resources.Symbol_Add;
-            this.btnAdd.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnAdd.Size = new System.Drawing.Size(40, 28);
-            this.btnAdd.Text = "toolStripButton1";
-            this.btnAdd.ToolTipText = "Adicionar";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.cmbTpRelatorio.FormattingEnabled = true;
+            this.cmbTpRelatorio.Items.AddRange(new object[] {
+            "Produtos em Estoque",
+            "Receitas por categoria",
+            "Despesas por categoria"});
+            this.cmbTpRelatorio.Location = new System.Drawing.Point(331, 27);
+            this.cmbTpRelatorio.Name = "cmbTpRelatorio";
+            this.cmbTpRelatorio.Size = new System.Drawing.Size(137, 21);
+            this.cmbTpRelatorio.TabIndex = 16;
             // 
-            // btnEdit
+            // button1
             // 
-            this.btnEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnEdit.Image = global::Uniplac.ePomar.WindowsApp.Properties.Resources.Symbol_Pencil;
-            this.btnEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnEdit.Size = new System.Drawing.Size(40, 28);
-            this.btnEdit.Text = "toolStripButton2";
-            this.btnEdit.ToolTipText = "Editar";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnDelete.Image = global::Uniplac.ePomar.WindowsApp.Properties.Resources.Symbol_Delete;
-            this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(40, 28);
-            this.btnDelete.Text = "toolStripButton3";
-            this.btnDelete.ToolTipText = "Deletar";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.button1.Location = new System.Drawing.Point(238, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Ver Relatório";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(670, 465);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cmbTpRelatorio);
             this.Controls.Add(this.toolbar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panControl);
@@ -219,6 +286,12 @@
         private System.Windows.Forms.ToolStripMenuItem caToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fornecedoresMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem receitasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem despesasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cmbTpRelatorio;
+        private System.Windows.Forms.Button button1;
     }
 }
 

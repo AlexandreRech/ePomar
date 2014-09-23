@@ -7,7 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Uniplac.ePomar.WindowsApp.Controls.ClienteForms;
+using Uniplac.ePomar.WindowsApp.Controls.DespesaForms;
 using Uniplac.ePomar.WindowsApp.Controls.FornecedorForms;
+using Uniplac.ePomar.WindowsApp.Controls.ProdutoForms;
+using Uniplac.ePomar.WindowsApp.Controls.ReceitaForms;
+using Uniplac.ePomar.WindowsApp.Controls.RelatorioForms;
 using Uniplac.ePomar.WindowsApp.Controls.Shared;
 
 namespace Uniplac.ePomar.WindowsApp
@@ -17,6 +22,7 @@ namespace Uniplac.ePomar.WindowsApp
         private static Principal _instance;
         private IDataManager _dataManager;
         private UserControl _control;
+        Timer time = new Timer();
 
         public Principal()
         {
@@ -116,6 +122,41 @@ namespace Uniplac.ePomar.WindowsApp
         private void fornecedoresMenuItem_Click(object sender, EventArgs e)
         {
             LoadDataManager(new FornecedorDataManagerImpl());
-        }       
+        }
+
+        private void receitasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadDataManager(new ReceitaDataManagerImpl());
+        }
+
+        private void despesasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadDataManager(new DespesaDataManagerImpl());
+        }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadDataManager(new ProdutoDataManagerImpl());
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {                    
+        
+            LoadDataManager(new ClienteDataManagerImpl());
+       
+         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+                RelatorioProdutosDialog relatorioProdutos = new RelatorioProdutosDialog();
+                relatorioProdutos.ShowDialog();            
+
+           
+        }
+
+            
     }
 }
+    
+

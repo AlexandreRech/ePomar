@@ -63,6 +63,9 @@ namespace Uniplac.ePomar.Infraestrutura.Dao.Common
         {
             return dbset.Where(where).ToList();
         }
-
+        public virtual List<T> GetAllList()
+        {
+            return dbset.ToList();
+        }
     }
 }
