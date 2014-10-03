@@ -45,5 +45,15 @@ namespace Uniplac.ePomar.WindowsApp.Controls.Shared
         /// <returns></returns>
         ToolTipMessage GetToolTipMessage();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        StateButtons GetStateButtons();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        void ReportData();
     }
 }

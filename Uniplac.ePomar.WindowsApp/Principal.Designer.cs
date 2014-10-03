@@ -32,7 +32,7 @@
             this.toolbar = new System.Windows.Forms.ToolStrip();
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.btnEdit = new System.Windows.Forms.ToolStripButton();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.btnReport = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.description = new System.Windows.Forms.ToolStripLabel();
             this.tituloLabel = new System.Windows.Forms.ToolStripLabel();
@@ -47,8 +47,7 @@
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmbTpRelatorio = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolbar.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -61,6 +60,7 @@
             this.btnAdd,
             this.btnEdit,
             this.btnDelete,
+            this.btnReport,
             this.toolStripSeparator1,
             this.description,
             this.tituloLabel});
@@ -96,18 +96,18 @@
             this.btnEdit.ToolTipText = "Editar";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnDelete
+            // btnReport
             // 
-            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnDelete.Image = global::Uniplac.ePomar.WindowsApp.Properties.Resources.Symbol_Delete;
-            this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(40, 28);
-            this.btnDelete.Text = "toolStripButton3";
-            this.btnDelete.ToolTipText = "Deletar";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnReport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReport.Image = global::Uniplac.ePomar.WindowsApp.Properties.Resources.Symbol_Add;
+            this.btnReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnReport.Size = new System.Drawing.Size(40, 28);
+            this.btnReport.Text = "toolStripButton3";
+            this.btnReport.ToolTipText = "Deletar";
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // toolStripSeparator1
             // 
@@ -222,27 +222,18 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
-            // cmbTpRelatorio
+            // btnDelete
             // 
-            this.cmbTpRelatorio.FormattingEnabled = true;
-            this.cmbTpRelatorio.Items.AddRange(new object[] {
-            "Produtos em Estoque",
-            "Receitas por categoria",
-            "Despesas por categoria"});
-            this.cmbTpRelatorio.Location = new System.Drawing.Point(331, 27);
-            this.cmbTpRelatorio.Name = "cmbTpRelatorio";
-            this.cmbTpRelatorio.Size = new System.Drawing.Size(137, 21);
-            this.cmbTpRelatorio.TabIndex = 16;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(238, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Ver Relatório";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDelete.Image = global::Uniplac.ePomar.WindowsApp.Properties.Resources.Symbol_Delete;
+            this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(40, 28);
+            this.btnDelete.Text = "toolStripButton3";
+            this.btnDelete.ToolTipText = "Deletar";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Principal
             // 
@@ -250,8 +241,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(670, 465);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.cmbTpRelatorio);
             this.Controls.Add(this.toolbar);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panControl);
@@ -275,7 +264,7 @@
         private System.Windows.Forms.ToolStrip toolbar;
         private System.Windows.Forms.ToolStripButton btnAdd;
         private System.Windows.Forms.ToolStripButton btnEdit;
-        private System.Windows.Forms.ToolStripButton btnDelete;
+        private System.Windows.Forms.ToolStripButton btnReport;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel description;
         private System.Windows.Forms.ToolStripLabel tituloLabel;
@@ -290,8 +279,7 @@
         private System.Windows.Forms.ToolStripMenuItem despesasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
-        private System.Windows.Forms.ComboBox cmbTpRelatorio;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripButton btnDelete;
     }
 }
 

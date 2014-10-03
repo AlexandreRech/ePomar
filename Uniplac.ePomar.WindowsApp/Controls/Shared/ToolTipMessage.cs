@@ -7,5 +7,7 @@ namespace Uniplac.ePomar.WindowsApp.Controls.Shared
         public string Delete { get; set; }
 
         public string Edit { get; set; }
+
+        public string Report { get; set; }
     }
 }

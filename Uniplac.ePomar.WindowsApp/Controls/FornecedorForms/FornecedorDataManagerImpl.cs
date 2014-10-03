@@ -93,10 +93,20 @@ namespace Uniplac.ePomar.WindowsApp.Controls.FornecedorForms
                        {
                            Add = "Adiciona Fornecedores",
                            Delete = "Exclui Fornecedores",
-                           Edit = "Atualiza a Fornecedor selecionada"
+                           Edit = "Atualiza a Fornecedor selecionada",
+                           Report = "Apresenta o Relatório de Fornecedores"
                        };
         }
 
         #endregion
+
+
+        public void ReportData() { }
+
+
+        public StateButtons GetStateButtons()
+        {
+            return new StateButtons { Add = true, Edit = true, Delete = true, Report = true };
+        }
     }
 }

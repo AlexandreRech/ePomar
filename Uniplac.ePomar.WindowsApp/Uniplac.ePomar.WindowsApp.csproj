@@ -129,6 +129,7 @@
     <Compile Include="Controls\RelatorioForms\RelatorioProdutosDialog.Designer.cs">
       <DependentUpon>RelatorioProdutosDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Shared\StateButtons.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>

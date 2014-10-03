@@ -95,8 +95,17 @@ namespace Uniplac.ePomar.WindowsApp.Controls.ProdutoForms
             {
                 Add = "Adiciona Produtos",
                 Delete = "Exclui Produtos",
-                Edit = "Atualiza o Produto selecionado"
+                Edit = "Atualiza o Produto selecionado",
+                Report = "Apresenta o Relatório de produtos"
             };
+        }
+
+        public void ReportData() { }
+
+
+        public StateButtons GetStateButtons()
+        {
+            return new StateButtons { Add = true, Edit = true, Delete = true, Report = true };
         }
     }
 }

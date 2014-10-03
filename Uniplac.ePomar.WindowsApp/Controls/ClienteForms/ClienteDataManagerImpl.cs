@@ -95,8 +95,17 @@ namespace Uniplac.ePomar.WindowsApp.Controls.ClienteForms
             {
                 Add = "Adiciona Clientes",
                 Delete = "Exclui Clientes",
-                Edit = "Atualiza o Cliente selecionado"
+                Edit = "Atualiza o Cliente selecionado",
+                Report = "Apresenta o Relatório de Clientes"
             };
+        }
+
+        public void ReportData() { }
+
+
+        public StateButtons GetStateButtons()
+        {
+            return new StateButtons { Add = true, Edit = true, Delete = true, Report = true };
         }
     }
 }

@@ -73,7 +73,7 @@ namespace Uniplac.ePomar.WindowsApp
 
                 btnAdd.ToolTipText = _dataManager.GetToolTipMessage().Add;
                 btnEdit.ToolTipText = _dataManager.GetToolTipMessage().Edit;
-                btnDelete.ToolTipText = _dataManager.GetToolTipMessage().Delete;
+                btnReport.ToolTipText = _dataManager.GetToolTipMessage().Delete;
 
                 toolbar.Enabled = _dataManager != null;
             }
@@ -100,6 +100,18 @@ namespace Uniplac.ePomar.WindowsApp
             try
             {
                 _dataManager.EditData();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _dataManager.ReportData();
             }
             catch (Exception exc)
             {
@@ -154,6 +166,8 @@ namespace Uniplac.ePomar.WindowsApp
 
            
         }
+
+       
 
             
     }

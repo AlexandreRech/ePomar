@@ -98,8 +98,17 @@ namespace Uniplac.ePomar.WindowsApp.Controls.DespesaForms
             {
                 Add = "Adiciona Despesas",
                 Delete = "Exclui Despesas",
-                Edit = "Atualiza a Despesa selecionada"
+                Edit = "Atualiza a Despesa selecionada",
+                Report = "Apresenta o Relatório de Despesas"
             };
+        }
+
+        public void ReportData() { }
+
+
+        public StateButtons GetStateButtons()
+        {
+            return new StateButtons { Add = true, Edit = true, Delete = true, Report = true };
         }
     }
 }

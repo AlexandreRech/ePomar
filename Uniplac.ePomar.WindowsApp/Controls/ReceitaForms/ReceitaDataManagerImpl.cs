@@ -100,9 +100,17 @@ namespace Uniplac.ePomar.WindowsApp.Controls.ReceitaForms
             {
                 Add = "Adiciona Receitas",
                 Delete = "Exclui Receitas",
-                Edit = "Atualiza a Receita selecionada"
+                Edit = "Atualiza a Receita selecionada",
+                Report = "Apresenta o Relatório de Receita"
             };
         }
-        
+
+        public void ReportData() { }
+
+
+        public StateButtons GetStateButtons()
+        {
+            return new StateButtons { Add = true, Edit = true, Delete = true, Report = true };
+        }
     }
 }
