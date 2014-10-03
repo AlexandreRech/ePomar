@@ -55,6 +55,10 @@ namespace Uniplac.ePomar.ConsoleApp
             repository.Add(fornecedor);
 
             uow.SaveChanges();
+
+
+
+
         }
     }
 }

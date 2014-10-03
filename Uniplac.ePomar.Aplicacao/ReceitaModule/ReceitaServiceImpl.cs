@@ -59,7 +59,9 @@ namespace Uniplac.ePomar.Aplicacao.ReceitaModule
 
         public IEnumerable<Receita> GetAll()
         {
-            return repository.GetAll();
+            var receitas = repository.GetAllIncluding(x => x.Cliente).ToList();
+
+            return receitas;
         }
                 
         public List<Cliente> GetAllClientes()
